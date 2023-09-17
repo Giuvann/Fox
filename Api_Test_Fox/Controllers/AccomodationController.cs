@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+﻿using Api_Test_Fox.DTOs.AccomodationDTOs;
+using DB_Test_Fox.Models;
+using DB_Test_Fox.Repository.AccomodationRepository;
+using Mapster;
+using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace Api_Test_Fox.Controllers
 {
@@ -8,36 +11,103 @@ namespace Api_Test_Fox.Controllers
     [ApiController]
     public class AccomodationController : ControllerBase
     {
+        private readonly IAccomodationRepository _accomodationRepository;
+
+        public AccomodationController(IAccomodationRepository accomodationRepository)
+        {
+            _accomodationRepository = accomodationRepository;
+        }
+
         // GET: api/<AccomodationController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<ActionResult<IEnumerable<AccomodationDetailDTO>>> GetAccomodationAsync()
         {
-            return new string[] { "value1", "value2" };
+            var accomodations = await _accomodationRepository.GetAllAsync();
+
+            if (accomodations == null || !accomodations.Any())
+            {
+                return NotFound();
+            }
+
+            var accomodationsDTO = accomodations.Adapt<List<AccomodationDetailDTO>>();
+
+            return Ok(accomodationsDTO);
+
         }
 
         // GET api/<AccomodationController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<ActionResult<AccomodationDetailDTO>> GetAccomodationById(int id)
         {
-            return "value";
+            var accomodation = await _accomodationRepository.GetByIdAsync(id);
+
+            if (accomodation == null)
+            {
+                return NotFound();
+            }
+
+            var accomodationDTO = accomodation.Adapt<AccomodationDetailDTO>();
+
+            return Ok(accomodationDTO);
         }
 
         // POST api/<AccomodationController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult<AccomodationCreateDTO>> PostAccomodationAsync(AccomodationCreateDTO accomodationDTO)
         {
+            var accomodation = accomodationDTO.Adapt<Accomodation>();
+
+            var createdAccomodation = await _accomodationRepository.AddAsync(accomodation);
+
+            if (createdAccomodation == null)
+            {
+                return Problem("There was an error while saving the accomodation.");
+            }
+
+            var createdAccomodationDTO = createdAccomodation.Adapt<AccomodationCreateDTO>();
+
+            return new ObjectResult(createdAccomodationDTO) { StatusCode = (int)HttpStatusCode.Created };
         }
 
         // PUT api/<AccomodationController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> PutAccomodationAsync(int id, AccomodationCreateDTO accomodationDTO)
         {
+            var accomodation = accomodationDTO.Adapt<Accomodation>();
+
+            try
+            {
+                var updatedAccomodation = await _accomodationRepository.UpdateAsync(id, accomodation);
+                return NoContent();
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         // DELETE api/<AccomodationController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> DeleteAccomodationAsync(int id)
         {
+            try
+            {
+                var success = await _accomodationRepository.DeleteAsync(id);
+                if (success)
+                {
+                    return NoContent();
+                }
+                return BadRequest("Failed to delete the accomodation.");
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
+
     }
 }

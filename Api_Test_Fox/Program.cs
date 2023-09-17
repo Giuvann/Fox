@@ -1,7 +1,8 @@
-using Microsoft.SqlServer;
-using Microsoft.Extensions.Configuration;
-using System.Configuration;
+
 using DB_Test_Fox.Models;
+using DB_Test_Fox.Repository.AccomodationRepository;
+using DB_Test_Fox.Repository.PriceListRepository;
+using DB_Test_Fox.Repository.RoomTypeRepository;
 
 namespace Api_Test_Fox
 {
@@ -19,6 +20,10 @@ namespace Api_Test_Fox
 
             builder.Services.AddScoped(_ =>
                     new BookingContext(builder.Configuration.GetConnectionString("DB_Fox_Connection")));
+
+            builder.Services.AddScoped<IAccomodationRepository, AccomodationRepository>();
+            builder.Services.AddScoped<IRoomTypeRepository, RoomTypeRepository>();
+            builder.Services.AddScoped<IPriceListRepository, PriceListRepository>();
 
 
             var app = builder.Build();

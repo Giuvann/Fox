@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Api_Test_Fox.props" />
+</Project>

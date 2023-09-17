@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Y:\\source\\repos\\Test_Fox\\DB_Test_Fox\\DB_Test_Fox.csproj": {}
+    "Y:\\Repos\\Test_Fox\\DB_Test_Fox\\DB_Test_Fox.csproj": {}
   },
   "projects": {
-    "Y:\\source\\repos\\Test_Fox\\DB_Test_Fox\\DB_Test_Fox.csproj": {
+    "Y:\\Repos\\Test_Fox\\DB_Test_Fox\\DB_Test_Fox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Y:\\source\\repos\\Test_Fox\\DB_Test_Fox\\DB_Test_Fox.csproj",
+        "projectUniqueName": "Y:\\Repos\\Test_Fox\\DB_Test_Fox\\DB_Test_Fox.csproj",
         "projectName": "DB_Test_Fox",
-        "projectPath": "Y:\\source\\repos\\Test_Fox\\DB_Test_Fox\\DB_Test_Fox.csproj",
+        "projectPath": "Y:\\Repos\\Test_Fox\\DB_Test_Fox\\DB_Test_Fox.csproj",
         "packagesPath": "C:\\Users\\Sarlan\\.nuget\\packages\\",
-        "outputPath": "Y:\\source\\repos\\Test_Fox\\DB_Test_Fox\\obj\\",
+        "outputPath": "Y:\\Repos\\Test_Fox\\DB_Test_Fox\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sarlan\\AppData\\Roaming\\NuGet\\NuGet.Config",

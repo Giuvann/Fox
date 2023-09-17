@@ -7,14 +7,17 @@ namespace DB_Test_Fox.Models
     {
         public BookingContext(string? v) : base(GetConnectionString())
         {
-            
+
         }
 
+        public BookingContext() : base(GetConnectionString())
+        {
 
+        }
 
         public DbSet<Accomodation> Accomodations { get; set; }
         public DbSet<RoomType> RoomTypes { get; set; }
-        public DbSet<RoomPrices> RoomPrices { get; set; }
+        public DbSet<PriceList> PriceList { get; set; }
 
 
         private static string GetConnectionString()
@@ -26,6 +29,13 @@ namespace DB_Test_Fox.Models
 
             return configuration.GetConnectionString("DB_Fox_Connection");
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+
+        }
+
+
 
     }
 }
