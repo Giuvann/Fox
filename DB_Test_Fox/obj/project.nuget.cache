@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zp5aZvqvzTKwM6jaGxBgCKYCxguHtKpzwyU9nUC4COsYDt3wknAQ13b8m3geIl9fVD8sn9jqBV2rhEC+N3PbwA==",
+  "dgSpecHash": "5PbsAyC7DTA+xugWJ5EABNn30TgpfRfe6uyQO8+/W41149EdRdE8czQIeE7OreO7GrvVzIoAw5WzvPPsPPBAbw==",
   "success": true,
-  "projectFilePath": "Y:\\Repos\\Test_Fox\\DB_Test_Fox\\DB_Test_Fox.csproj",
+  "projectFilePath": "Y:\\Repos\\Fox\\DB_Test_Fox\\DB_Test_Fox.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sarlan\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Sarlan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

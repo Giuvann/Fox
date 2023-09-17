@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Y:\\Repos\\Test_Fox\\Api_Test_Fox\\Api_Test_Fox.csproj": {}
+    "Y:\\Repos\\Fox\\Api_Test_Fox\\Api_Test_Fox.csproj": {}
   },
   "projects": {
-    "Y:\\Repos\\Test_Fox\\Api_Test_Fox\\Api_Test_Fox.csproj": {
+    "Y:\\Repos\\Fox\\Api_Test_Fox\\Api_Test_Fox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Y:\\Repos\\Test_Fox\\Api_Test_Fox\\Api_Test_Fox.csproj",
+        "projectUniqueName": "Y:\\Repos\\Fox\\Api_Test_Fox\\Api_Test_Fox.csproj",
         "projectName": "Api_Test_Fox",
-        "projectPath": "Y:\\Repos\\Test_Fox\\Api_Test_Fox\\Api_Test_Fox.csproj",
+        "projectPath": "Y:\\Repos\\Fox\\Api_Test_Fox\\Api_Test_Fox.csproj",
         "packagesPath": "C:\\Users\\Sarlan\\.nuget\\packages\\",
-        "outputPath": "Y:\\Repos\\Test_Fox\\Api_Test_Fox\\obj\\",
+        "outputPath": "Y:\\Repos\\Fox\\Api_Test_Fox\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sarlan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "Y:\\Repos\\Test_Fox\\DB_Test_Fox\\DB_Test_Fox.csproj": {
-                "projectPath": "Y:\\Repos\\Test_Fox\\DB_Test_Fox\\DB_Test_Fox.csproj"
+              "Y:\\Repos\\Fox\\DB_Test_Fox\\DB_Test_Fox.csproj": {
+                "projectPath": "Y:\\Repos\\Fox\\DB_Test_Fox\\DB_Test_Fox.csproj"
               }
             }
           }
@@ -80,14 +80,14 @@
         }
       }
     },
-    "Y:\\Repos\\Test_Fox\\DB_Test_Fox\\DB_Test_Fox.csproj": {
+    "Y:\\Repos\\Fox\\DB_Test_Fox\\DB_Test_Fox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Y:\\Repos\\Test_Fox\\DB_Test_Fox\\DB_Test_Fox.csproj",
+        "projectUniqueName": "Y:\\Repos\\Fox\\DB_Test_Fox\\DB_Test_Fox.csproj",
         "projectName": "DB_Test_Fox",
-        "projectPath": "Y:\\Repos\\Test_Fox\\DB_Test_Fox\\DB_Test_Fox.csproj",
+        "projectPath": "Y:\\Repos\\Fox\\DB_Test_Fox\\DB_Test_Fox.csproj",
         "packagesPath": "C:\\Users\\Sarlan\\.nuget\\packages\\",
-        "outputPath": "Y:\\Repos\\Test_Fox\\DB_Test_Fox\\obj\\",
+        "outputPath": "Y:\\Repos\\Fox\\DB_Test_Fox\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sarlan\\AppData\\Roaming\\NuGet\\NuGet.Config",

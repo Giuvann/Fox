@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "I6erW3suvwDYUrmaibqpqttvElF54UylTSY1CHQ7IQBZ737lMCfXfrzegrJILDSO+5g7OUq+hISArMlc13gjqQ==",
+  "dgSpecHash": "Zx1X1BYVdupHKFD7p2Z+4hdzEE+EItihWCt3Z1VLsEgMjhDnUmd8s/FHAg7U+7rj1NDDqGRFFJ62gBzvxZ5+eQ==",
   "success": true,
-  "projectFilePath": "Y:\\Repos\\Test_Fox\\Api_Test_Fox\\Api_Test_Fox.csproj",
+  "projectFilePath": "Y:\\Repos\\Fox\\Api_Test_Fox\\Api_Test_Fox.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sarlan\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Sarlan\\.nuget\\packages\\mapster\\7.3.0\\mapster.7.3.0.nupkg.sha512",
