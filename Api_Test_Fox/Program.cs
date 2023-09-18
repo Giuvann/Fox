@@ -12,15 +12,15 @@ namespace Api_Test_Fox
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            //retrieving the connection string from the appsettings.json
             builder.Services.AddScoped(_ =>
                     new BookingContext(builder.Configuration.GetConnectionString("DB_Fox_Connection")));
 
+            //registering the three repositories as services trough DI
             builder.Services.AddScoped<IAccomodationRepository, AccomodationRepository>();
             builder.Services.AddScoped<IRoomTypeRepository, RoomTypeRepository>();
             builder.Services.AddScoped<IPriceListRepository, PriceListRepository>();
@@ -28,7 +28,6 @@ namespace Api_Test_Fox
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();

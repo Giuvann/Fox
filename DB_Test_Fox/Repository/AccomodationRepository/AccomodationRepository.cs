@@ -56,10 +56,8 @@ namespace DB_Test_Fox.Repository.AccomodationRepository
 
         public async Task<Accomodation> GetByIdAsync(int id)
         {
-            var accomodation = await _context.Accomodations
-                                    .Include(a => a.RoomTypes)
-                                        .Include(a => a.RoomTypes.Select(rt => rt.PriceLists))
-                                    .SingleOrDefaultAsync(a => a.AccomodationId == id);
+            var accomodation = await _context.Accomodations.Include(a => a.RoomTypes)
+                .Include(a => a.RoomTypes.Select(rt => rt.PriceLists)).SingleOrDefaultAsync(a => a.AccomodationId == id);
 
             if (accomodation == null)
             {

@@ -47,16 +47,12 @@ namespace DB_Test_Fox.Repository.RoomTypeRepository
                 return null;
             }
 
-            return await _context.RoomTypes
-                            .Include(rt => rt.PriceLists)
-                            .ToListAsync();
+            return await _context.RoomTypes.Include(rt => rt.PriceLists).ToListAsync();
         }
 
         public async Task<RoomType> GetByIdAsync(int id)
         {
-            var roomType = await _context.RoomTypes
-                                    .Include(rt => rt.PriceLists)
-                                    .SingleOrDefaultAsync(a => a.RoomTypeId == id);
+            var roomType = await _context.RoomTypes.Include(rt => rt.PriceLists).SingleOrDefaultAsync(a => a.RoomTypeId == id);
 
             if (roomType == null)
             {

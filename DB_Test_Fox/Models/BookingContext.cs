@@ -29,13 +29,5 @@ namespace DB_Test_Fox.Models
 
             return configuration.GetConnectionString("DB_Fox_Connection");
         }
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-
-        }
-
-
-
     }
 }
